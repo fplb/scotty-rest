@@ -92,4 +92,4 @@ actionToUpdates act =  updateTitle
                   (actOrder act)
 
 runDb :: Sqlite.SqlPersistT (ResourceT (NoLoggingT IO)) a -> IO a
-runDb = runNoLoggingT . runResourceT . Sqlite.withSqliteConn "dev.sqlite3" . Sqlite.runSqlConn
+runDb = runNoLoggingT . runResourceT . Sqlite.withSqliteConn "/home/vagrant/dev.sqlite3" . Sqlite.runSqlConn
